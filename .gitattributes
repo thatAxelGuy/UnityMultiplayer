@@ -1,0 +1,55 @@
+# Unity YAML files (use text and enable diffing)
+*.meta       text merge=unityyamlmerge eol=lf
+*.unity      text merge=unityyamlmerge eol=lf
+*.prefab     text merge=unityyamlmerge eol=lf
+*.mat        text merge=unityyamlmerge eol=lf
+*.anim       text merge=unityyamlmerge eol=lf
+*.controller text merge=unityyamlmerge eol=lf
+*.asset      text merge=unityyamlmerge eol=lf
+*.physicMaterial text merge=unityyamlmerge eol=lf
+*.renderTexture text merge=unityyamlmerge eol=lf
+
+# C# scripts
+*.cs         text eol=lf
+
+# Shader files
+*.shader     text eol=lf
+*.cginc      text eol=lf
+*.hlsl       text eol=lf
+
+# Force binary for binary files
+*.dll        binary
+*.exe        binary
+*.png        binary
+*.jpg        binary
+*.jpeg       binary
+*.tga        binary
+*.tif        binary
+*.tiff       binary
+*.mp3        binary
+*.ogg        binary
+*.wav        binary
+*.fbx        binary
+*.mp4        binary
+*.mov        binary
+*.avi        binary
+*.pdf        binary
+*.zip        binary
+*.unitypackage binary
+*.psd        binary
+
+# Ignore line ending normalization for these
+*.ico        binary
+*.ttf        binary
+*.otf        binary
+
+# Git LFS (if using Git Large File Storage — uncomment if applicable)
+# *.psd filter=lfs diff=lfs merge=lfs -text
+# *.fbx filter=lfs diff=lfs merge=lfs -text
+# *.png filter=lfs diff=lfs merge=lfs -text
+
+# General
+*.json       text eol=lf
+*.xml        text eol=lf
+*.txt        text eol=lf
+*.md         text eol=lf
