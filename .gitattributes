@@ -53,3 +53,10 @@
 *.xml        text eol=lf
 *.txt        text eol=lf
 *.md         text eol=lf
+
+# Explicitly set main language to C#
+*.cs linguist-language=C#
+
+# Avoid misclassification of .m files (if they exist)
+*.m linguist-detectable=false
+
