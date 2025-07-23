@@ -1,18 +1,29 @@
+//using System.Diagnostics;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : NetworkBehaviour
 {
     public float moveSpeed = 5f;
+    private Vector2 moveInput;
     void Update()
     {
         if (!IsOwner) return;
 
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        Vector3 movement = new Vector3(moveInput.x, 0, moveInput.y) * moveSpeed * Time.deltaTime;
+        transform.position += movement;
 
-        Vector3 move = new Vector3(h, 0, v) * moveSpeed * Time.deltaTime;
-        transform.Translate(move);
-        
     }
+
+    void OnMove(InputValue value)
+    {
+        if (!IsOwner) return;
+
+        moveInput = value.Get<Vector2>();
+        Debug.Log($"[OnMove - SendMessages] Input: {moveInput}");
+    }
+
+
+
 }
