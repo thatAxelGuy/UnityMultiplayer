@@ -60,3 +60,9 @@
 # Avoid misclassification of .m files (if they exist)
 *.m linguist-detectable=false
 
+# --- GitHub language stats (linguist) ---
+# Unity window layouts share the .wlt extension with Mathematica
+*.wlt linguist-detectable=false
+# Unity template / third-party content, not my code
+Assets/TutorialInfo/** linguist-vendored
+Assets/TextMesh[[:space:]]Pro/** linguist-vendored
